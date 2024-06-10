@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:reflekt_mobile_test/features/ai_chat/widgests/chat_card.dart';
 import 'package:reflekt_mobile_test/features/ai_chat/widgests/section_title.dart';
+import 'package:reflekt_mobile_test/features/personal_profile/personal_profile_screen.dart';
 import 'package:reflekt_mobile_test/settings/app_colors.dart';
 
 class AiChatScreen extends StatelessWidget {
@@ -30,7 +31,7 @@ class AiChatScreen extends StatelessWidget {
               title: 'Quick start',
               description: 'Here\'re a few ideas to help your start',
             ),
-            _buildQuickStartCard(),
+            _buildQuickStartCard(context),
           ],
         ),
       ),
@@ -151,7 +152,7 @@ class AiChatScreen extends StatelessWidget {
     );
   }
 
-  Widget _buildQuickStartCard() {
+  Widget _buildQuickStartCard(context) {
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 20.0, vertical: 15),
       child: Container(
@@ -192,7 +193,13 @@ class AiChatScreen extends StatelessWidget {
                     ),
                     const SizedBox(height: 18.0),
                     ElevatedButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.of(context).push(
+                          MaterialPageRoute(
+                            builder: (context) => const PersonalProfileScreen(),
+                          ),
+                        );
+                      },
                       style: ElevatedButton.styleFrom(
                         backgroundColor: AppColors.buttonColor,
                         foregroundColor: Colors.white,
