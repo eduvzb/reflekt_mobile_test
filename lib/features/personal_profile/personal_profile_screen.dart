@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:reflekt_mobile_test/features/ai_chat/ai_chat_screen.dart';
 import 'package:reflekt_mobile_test/settings/app_colors.dart';
 
 class PersonalProfileScreen extends StatelessWidget {
@@ -281,7 +282,13 @@ class PersonalProfileScreen extends StatelessWidget {
                       borderRadius: BorderRadius.circular(10.0),
                     ),
                   ),
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.of(context).push(
+                      MaterialPageRoute(
+                        builder: (context) => const AiChatScreen(),
+                      ),
+                    );
+                  },
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
