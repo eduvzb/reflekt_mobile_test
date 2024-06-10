@@ -9,12 +9,64 @@ class PersonalProfileScreen extends StatelessWidget {
     return Scaffold(
       body: ListView(
         children: <Widget>[
+          Container(
+            height: 100,
+            decoration: BoxDecoration(
+              gradient: const LinearGradient(
+                colors: [
+                  Color.fromARGB(255, 243, 242, 246),
+                  Color.fromARGB(255, 55, 36, 130),
+                ],
+                begin: Alignment.topLeft,
+                end: Alignment.bottomRight,
+              ),
+              image: DecorationImage(
+                image: const AssetImage("assets/images/bg_noise.png"),
+                fit: BoxFit.fill,
+                colorFilter: ColorFilter.mode(
+                  AppColors.primaryTextColor.withOpacity(0.6),
+                  BlendMode.multiply,
+                ),
+              ),
+              borderRadius: const BorderRadius.only(
+                bottomLeft: Radius.circular(20),
+                bottomRight: Radius.circular(20),
+              ),
+            ),
+            child: Padding(
+              padding:
+                  const EdgeInsets.symmetric(horizontal: 20.0, vertical: 10),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Row(
+                    children: [
+                      Image.asset(
+                        'assets/images/medpass_logo.png',
+                        height: 50,
+                      ),
+                      const SizedBox(width: 25),
+                      const Text(
+                        'Complete Your \nProfile',
+                        style: TextStyle(
+                          fontFamily: 'Arial',
+                          color: Colors.white,
+                          fontSize: 20.0,
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                    ],
+                  ),
+                ],
+              ),
+            ),
+          ),
           const ListTile(
             title: Text(
               'Personal Information',
               style: TextStyle(
                   fontSize: 22,
-                  fontWeight: FontWeight.w500,
+                  fontWeight: FontWeight.w600,
                   color: AppColors.primaryTextColor),
             ),
           ),
