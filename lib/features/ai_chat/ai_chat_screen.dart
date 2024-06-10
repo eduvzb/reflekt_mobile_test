@@ -192,36 +192,40 @@ class AiChatScreen extends StatelessWidget {
                       ),
                     ),
                     const SizedBox(height: 18.0),
-                    ElevatedButton(
-                      onPressed: () {
-                        Navigator.of(context).push(
-                          MaterialPageRoute(
-                            builder: (context) => const PersonalProfileScreen(),
-                          ),
-                        );
-                      },
-                      style: ElevatedButton.styleFrom(
-                        backgroundColor: AppColors.buttonColor,
-                        foregroundColor: Colors.white,
-                        shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(6.0),
-                        ),
-                      ),
-                      child: Wrap(
-                        crossAxisAlignment: WrapCrossAlignment.center,
-                        children: [
-                          Text(
-                            'Start'.toUpperCase(),
-                            style: const TextStyle(
-                              fontSize: 14.0,
+                    SizedBox(
+                      height: 30,
+                      child: ElevatedButton(
+                        onPressed: () {
+                          Navigator.of(context).push(
+                            MaterialPageRoute(
+                              builder: (context) =>
+                                  const PersonalProfileScreen(),
                             ),
+                          );
+                        },
+                        style: ElevatedButton.styleFrom(
+                          backgroundColor: AppColors.buttonColor,
+                          foregroundColor: Colors.white,
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(5.0),
                           ),
-                          const SizedBox(width: 10.0),
-                          const ImageIcon(
-                            AssetImage('assets/icons/arrow_right.png'),
-                            size: 14,
-                          ),
-                        ],
+                        ),
+                        child: Wrap(
+                          crossAxisAlignment: WrapCrossAlignment.center,
+                          children: [
+                            Text(
+                              'Start'.toUpperCase(),
+                              style: const TextStyle(
+                                fontSize: 14.0,
+                              ),
+                            ),
+                            const SizedBox(width: 10.0),
+                            const ImageIcon(
+                              AssetImage('assets/icons/arrow_right.png'),
+                              size: 14,
+                            ),
+                          ],
+                        ),
                       ),
                     ),
                   ],
