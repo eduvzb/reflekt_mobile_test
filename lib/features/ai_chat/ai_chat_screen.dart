@@ -181,7 +181,7 @@ class AiChatScreen extends StatelessWidget {
                       style: TextStyle(
                         color: AppColors.primaryTextColor,
                         fontSize: 18.0,
-                        fontWeight: FontWeight.w600,
+                        fontWeight: FontWeight.w500,
                       ),
                     ),
                     const SizedBox(height: 12.0),
